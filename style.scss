@@ -1,0 +1,1370 @@
+@font-face {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    src: url('fonts/Inter-Bold-slnt=0.ttf') format("truetype");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    src: url('fonts/Inter-Regular-slnt=0.ttf') format("truetype");
+    font-weight: 400;
+  }
+  @font-face{
+      font-family: 'SVN-Servetica';
+      font-style: normal;
+      src: url('fonts/SVN-Servetica Medium.otf') format("opentype");
+      font-weight: 500;
+  }
+
+// Text and heading title format
+%textFormat{
+    font-family: 'Inter', sans-serif;
+    color: #464646;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+  }
+%titleFormat{
+    font-family: 'Inter', sans-serif;
+    color: #464646;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+$bodyFont: 'Inter', sans-serif;
+// __textSetting.scss
+
+// $textSize: 18px;
+// $textColor: #111111;
+// $textStyle: normal;
+// $textLineheight: 30px;
+// $headerSize: 20px;
+// $headerColor: #422D1B;
+
+
+
+
+*{margin: 0; padding: 0;} 
+html {
+    height: 100%
+}
+.container-fluid{
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $bodyFont;
+    p{
+        @extend %textFormat;
+    }
+    h3{
+        @extend %titleFormat;
+    }
+}
+
+.introcover{
+    background-image: url(images/pc/introBg.png);
+    padding: 75px;
+    background-size: 100% 100%;
+    padding-bottom: 117px;
+    display: inline-grid;
+    width: 100%;
+    .animateTitle{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        height: 127px;
+        position: relative;
+        display: inline-flex;
+        flex-wrap: wrap;
+        .split-text{
+            font-family: SVN-Servetica;
+            font-weight: 500;
+            color: #fff;
+            font-size: 65px;
+            text-transform: uppercase;
+            // padding: 5px;
+            display: inline-block;
+            margin: auto;
+        }
+        .space{
+            width: 15px;
+        }
+        p{
+
+            font-family: SVN-Servetica;
+            font-weight: 500;
+            color: #fff;
+            font-size: 65px;
+            text-transform: uppercase;
+        }
+        &::after{
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: calc(50% - 50px);
+            width: 100px;
+            height: 2px;
+            background: #ffffff;
+            content: "";
+
+        }
+
+    }
+    .loginIcon{
+        text-align: center;
+        margin: auto;
+        margin-top: 90px;
+        span{
+            width: 20%;
+            display: -webkit-inline-box;
+            margin: auto;
+            box-shadow: inset 25px 24px 20px #171515db !important;
+            -webkit-box-shadow: inset 12px 15px 20px 12px #171515db !important;
+            // -webkit-box-shadow: inset 25px 24px 20px #171515db;
+            -moz-box-shadow: 25px 24px 20px #171515db;
+            border-radius: 8px;
+            img{
+                width: 100%;
+            }
+            
+        }
+        span.loginCenter{
+            width: 26%;;
+            z-index: 10;
+            position: relative;
+        }
+        span.before{
+            width: 20%;
+            z-index: 8;
+            position: relative;
+        }
+        span.after{
+            width: 17%;
+            z-index: 6;
+            position: relative;
+        }
+        span.loginDetails{
+            margin-right: -45px;
+        }
+        span.loginBooking{
+            margin-left: -45px;
+        }
+    }
+}
+// end intro css 
+
+
+
+
+
+
+
+
+.vibecover {
+    background: #ffffff;
+    width: 100%;
+    padding-bottom: 120px;
+    overflow: hidden;
+
+    .gradientBg{
+        background-image: url(images/pc/gradientVibe.png);
+        .vibe{
+            margin-top: 90px;
+            margin-left: -100px;
+            position: relative;
+            z-index: 2;
+            display: block;
+            text-align: left;
+            width: 29.5%;
+
+        }
+        .centro{
+            width: 55%;
+            margin-left: 5%;
+            margin-top: -75px;
+            z-index: 6;
+            position: relative;
+            margin-bottom: 75px;
+        }
+
+        .textAndImg{
+            width: 100%;
+            margin-top: -65px;
+            z-index: 3;
+            position: relative;
+            .text{
+                padding: 45px;
+                background: #8C6E54;
+                background: url(images/pc/textLeftBg.png);
+                background-position: center center;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                p{
+                  color: #ffffff;  
+                }
+                
+            }
+            .left{
+                display: inline-block;
+                // width: 35%;
+                display: block;
+                width: 42%;
+                top: 20%;
+                left: 10%;
+                position: absolute;
+                float: left;
+                z-index: 4;
+
+            }
+            .right{
+                display: inline-block;
+                width: 70%;
+                position: relative;
+                top: 0;
+                left: 35%;
+                z-index: 3;
+                text-align: center;
+            }
+            .transparent{
+                background: transparent;
+                padding: 0;
+                width: 35%;
+                p{
+                    color: #464646;
+                    margin: 0;
+                }
+                
+            }
+        }
+        .second{
+            .right{
+                margin-bottom: 0px;
+                img{
+                    height: 700px;
+                }
+            }
+        }
+
+    }
+    // end backgroundBG    
+}
+// end vibe cover 
+
+.spacer.first{
+    margin-top:-90px;
+}
+.comprehen-icon{
+    background: url(images/pc/matteBg.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 110px;
+    &.d-sm-block{
+        display: flex !important;
+        visibility: visible;
+    }
+    ._items{
+        padding: 0 15px;
+        width: 88%;
+        img{
+            width: 75%;
+            margin-bottom: 30px;
+        }
+    }
+}
+.comprehen-animate{
+    width: 100%;
+    overflow: hidden;
+    .screens{
+        width: 100%;
+        
+        img{
+            width: 100%;
+            margin: auto;
+            display: block;
+        }
+    }
+    .top{
+        margin-top: 30px;
+        margin-right: -300px;
+    }
+    .bottom{
+        margin-top: -90px;
+    }
+}
+.services{
+    background: url(images/pc/matteBg.jpg);
+    background-size: 100%;
+    background-position: center;
+    .content{
+        padding: 110px;
+        ._info{
+            margin-bottom: 45px;
+            p{
+                margin: 0;
+            }
+        }
+        .servicesIcon{
+            display: table;
+            span{
+                display: table-cell;
+                padding: 8px;
+                img.left, img.right{
+                    box-shadow: 10px 10px 10px #5f5f5d2e;
+                }
+            }
+            span._centerIcon{
+                .__cover{
+                    border-radius: 38px;
+                    box-shadow: 0px 20px 36px #1d1d1c7a;
+                }
+            }
+        }
+    }
+}
+.location{
+    // padding-top: 90px;
+    display: block;
+    text-align: center;
+    .vibeLogo{
+        text-align: center;
+        display: inline-block;
+        margin-bottom: -200px;
+        img{
+            display: block;
+            margin: auto;
+            position: relative;
+            
+        }
+        img.logoImg{
+            width: 300px;
+            height: auto;
+            z-index: 5;
+        }
+        img.pointer{
+            margin: auto;
+            margin-top: -150px;
+            z-index: 4;
+        }
+    }
+    .bottom{
+        img{
+            mix-blend-mode: multiply;
+        }
+    }
+
+}
+
+
+// THIS CSS control THE ANIMATION of: Intro, Title, text, image...
+
+// css for the text1 animation
+.text_animation{
+    .split-text{
+        @extend %textFormat;
+        display: inline-block;
+        margin: auto;
+        color: #ffffff;
+    }
+    .space{
+        width: 3px;
+    }
+}
+
+// textandImg1 
+.normaly{
+    p{
+        margin: 0;
+        opacity: 0;
+        &.active{
+            animation: textPull 1s forwards;
+            &:nth-child(1){
+                animation-delay: 0.2s;
+            }
+            &:nth-child(2){
+                animation-delay: 0.4s;
+            }
+            &:nth-child(3){
+                animation-delay: 0.6s;
+            }
+            &:nth-child(4){
+                animation-delay: 0.8s;
+            }
+
+        }
+
+    }
+}
+
+// textAndImg 2 
+.transparent p{
+    margin: 0;
+    opacity: 0;
+    transition: 0.4s;
+}
+.transparent p.active{
+    animation: textPull 1s forwards;
+    // animation-delay: .5s;
+}
+.transparent p.active:nth-child(1){
+    animation-delay: 0.2s;
+}
+.transparent p.active:nth-child(2){
+    animation-delay: 0.4s;
+}
+.transparent p.active:nth-child(3){
+    animation-delay: 0.6s;
+}
+.transparent p.active:nth-child(4){
+    animation-delay: 0.8s;
+}
+.transparent p.active:nth-child(5){
+    animation-delay: 1s;
+}
+
+.vibecover{
+    .vibe{
+        transition: all ease-in 0,3s;
+        &.leftToRight{
+            animation: leftToRight 9s forwards;
+        }
+        &.return{
+            animation: return 9s forwards;
+        }
+    }
+}
+
+.comprehen-icon ._items{
+    p{
+        margin: 0;
+        opacity: 0;
+        &.active{
+            animation: textPull 1s forwards;
+            &:nth-child(1){
+                animation-delay: 0.2s;
+            }
+            &:nth-child(2){
+                animation-delay: 0.4s;
+            }
+            &:nth-child(3){
+                animation-delay: 0.6s;
+            }
+            &:nth-child(4){
+                animation-delay: 0.8s;
+            }
+
+        }
+
+    }
+}
+.services .content ._info{
+    p{
+        margin: 0;
+        opacity: 0;
+        &.active{
+            animation: textPull 1s forwards;
+            &:nth-child(1){
+                animation-delay: 0.2s;
+            }
+            &:nth-child(2){
+                animation-delay: 0.4s;
+            }
+            &:nth-child(3){
+                animation-delay: 0.6s;
+            }
+
+
+        }
+
+    }
+}
+
+.comprehen-animate{
+    .top.screens{
+        opacity: 0.75;
+        img{
+            margin-right: -300px !important;
+        }
+        
+
+    }
+    .bottom.screens{
+        opacity: 0.75;
+        img{
+          margin-left: -300px !important;  
+        }
+        
+  
+    }
+    .leftToRight{
+        animation: leftToRight 5s forwards;
+    }
+    .rightToLeft{
+        animation: rightToLeft 5s forwards;
+    }
+
+}
+
+.servicesIcon{
+    span{
+        opacity: 0;
+        transition: all ease 0.3s;
+
+    }
+    ._rightIcon{
+        position: relative;
+        z-index: 3;
+    }
+    ._centerIcon{
+        position: relative;
+        z-index: 4;
+    }
+    .zoomIn{
+        animation: zoomIn 2s forwards;
+        // animation-duration: 0.3s;
+    }
+    .slideLeft{
+        animation: slideLeft 1.5s forwards;
+        // animation-duration: 0.3s;
+        animation-delay: 2s;
+    }
+    .slideRight{
+        animation: slideRight 1.5s forwards;
+        animation-delay: 3.5s;
+    }
+}
+
+.location{
+    .vibeLogo{
+        img{
+            opacity: 0;
+            transition: all ease 0.3s;
+        }
+        .bounceIn{
+            animation: bounceIn .75s forwards;
+        }
+        .fadeInSlow{
+            animation: fadeInSlow .75s forwards;
+            animation-delay: .75s;
+        }
+    }
+    .bottom{
+        img{
+            opacity: 0;
+            transition: all ease 0.3s;
+        }
+        .jumpUp{
+            animation: jumpUp .5s forwards;
+            animation-delay: 1.5s;
+        }
+    }
+}
+@keyframes bounceIn {
+    0%{
+        transform: scale(.5);
+        opacity: 0.3;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes fadeInSlow {
+    0%{
+        transform: scale(0.75);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes jumpUp {
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    25%{
+        transform: translateY(-50px);
+        opacity: .25;
+    }
+    
+    50%{
+        transform: translateY(25px);
+        opacity: .5;
+    }
+    75%{
+        transform: translateY(-25px);
+        opacity: .75;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    // 100%{
+    //     transform: scale(100%);
+    //     opacity: 1;
+    // }
+}
+
+
+@keyframes zoomIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+// animation keyframes for Mb
+@keyframes slideFromLeftToCenter{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRightToCenter{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes leftToRight{
+    0%{
+        transform: translateX(0px);
+        opacity: 0.75;
+    }
+    100%{
+        transform: translateX(35%);
+        opacity: 1;
+    }
+}
+@keyframes rightToLeft{
+    0%{
+        transform: translateX(0px);
+        opacity: 0.75;
+    }
+    100%{
+        transform: translateX(-35%);
+        opacity: 1;
+    }
+}
+
+@keyframes leftToRightMb{
+    0%{
+        transform: translateX(0px);
+        opacity: 0.75;
+    }
+    100%{
+        transform: translateX(50%);
+        opacity: 1;
+    }
+}
+@keyframes rightToLeftMb{
+    0%{
+        transform: translateX(0px);
+        opacity: 0.75;
+    }
+    100%{
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes return{
+    0%{
+        transform: translateX(100%)
+    }
+    100%{
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes textPull {
+    0%{	
+        transform: translateY(200px);
+        // height: 0%;
+        // transform: scale(0.5);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%{
+        transform: translateY(0);
+        // height: 100%;
+        // transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    // 100%{opacity: 0; visibility: hidden; }
+
+}
+
+
+// CSS FOR THE MOBILE DEVICES 
+
+// phone devices > 575 width, portals devices:
+@media (max-width: 767px)
+{
+    * {
+        margin: 0;
+      }
+    
+    body{
+        p{
+            
+            font-size: 13px;
+            line-height: 20px;
+        }
+        h3{
+            
+            font-size: 17px;
+            line-height: 27px;
+        }
+    }
+    
+    // css for the INTRO 
+    .introcover{
+        padding:  60px 0px;
+        .animateTitle{
+            width: 70%;
+            text-align: center;
+            display: inline-flex;
+            &::after{
+                width: 60px;
+                left: calc(50% - 30px);
+            }
+            .split-text{
+                font-size: 30px;
+                // margin: unset;
+            }
+        }
+        .loginIcon{
+            margin-top: 30px;
+            width: 120%;
+            margin-left: -10%;
+            span{
+                box-shadow: 0px 5px 30px 1px #ffffff45 !important;
+            }
+            span.loginDetails{
+                margin-right: -15px;
+            }
+            
+            span.loginBooking{
+                margin-left: -15px;
+            }
+
+        }
+    }
+    // css for the vibe & centro 
+    .vibecover{
+        .gradientBg{
+            background-image: url(images/mb/gradientVibe.png);
+            background-position: top;
+            background-size: 100%;
+            width: 100%;
+            height: 100%;
+            /* margin-top: -30px; */
+            /* padding-top: 30px; */
+            .vibe{
+                margin-top: 45px;
+                margin-left: 0;
+            }
+            .textAndImg{
+                margin-top: 0;
+                .text.left{
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                }
+                .right{
+                    width: 85%;
+                    left: 15%;
+                }
+            }
+            .centro{
+                margin-top: -22px;
+                margin-left: 14%;
+                margin-bottom: 45px;
+            }
+            .second{
+                .right{
+                    width: 100%;
+                    left: 0;
+                    padding: 60px 30px;
+                    margin: auto;
+                    img{
+                        height: auto;
+                    }
+                }
+                .onlyMb.transparent{
+                    padding: 15px 30px;
+                }
+            }
+        }
+    }
+    .spacer{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .comprehen-icon{
+        background: url(images/mb/matteBg.png);
+        background-size: 100% 100%;
+        background-position: center;
+        padding: 15px;
+        &.d-none.d-lg-block{
+            display: none !important;
+            visibility: hidden;
+        }
+        &.d-lg-block{
+            display: flex !important;
+        }
+        ._items{
+            padding: 0 15px;
+            width: 88%;
+            img{
+                width: 75%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    #comprehenCarousel{
+        background: url(images/mb/matteBg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px 45px 75px 45px;
+        position: relative;
+        ol{
+            bottom: 15px;
+            li{
+                list-style: none;
+                background-color: darkgrey;
+                text-indent: unset;
+                text-align: center;
+                border-bottom: none;
+                border-top: none;
+                width: auto;
+                height: auto;
+                padding: 5px;
+                color: #fff;
+                &.active{
+                    background: #464646;
+                }
+            }
+        }
+        .carousel-control-prev, .carousel-control-next{
+            color: #464646;
+            background: lightgrey;
+            background: unset;
+            position: absolute;
+            width: 80px;
+            height: 50px;
+            top: 85%;
+            span.fa{
+                font-size: 30px;
+            }
+        }
+    }
+    .comprehen-animate{
+        height: 800px;
+        .gradientBg{
+            height: 100%;
+            padding: 30px 0;
+            .top.screens{
+                opacity: 0.75;
+                // margin-top: 0;
+                height: 50%;
+                margin: 0;
+                img{
+                    margin-right: -300px !important;
+                    height: 100%;
+                    width: auto;
+                }
+                
+        
+            }
+            .bottom.screens{
+                opacity: 0.75;
+                height: 50%;
+                margin: 0;
+                margin-top: -30px;
+                // margin-top: 0;
+                // margin-bottom: 100px;
+                img{
+                    margin-left: -300px !important;  
+                    height: 100%;
+                    width: auto;
+                }
+                
+          
+            }
+            .leftToRight.Mb{
+                animation: leftToRightMb 3s forwards;
+            }
+            .rightToLeft.Mb{
+                animation: rightToLeftMb 3s forwards;
+            }
+        }
+        
+    
+    }
+    .services{
+        background: url(images/mb/matteBg2.jpg);
+        background-size: 100%;
+        background-position: center;
+        .content{
+            padding: 30px;
+            padding-top: 60px;
+            .onlyMb{
+                box-shadow: 0px 20px 30px #736f6f;
+                padding: 0;
+                border-radius: 55px;
+                width: 80%;
+                margin: auto;
+                opacity: 0;
+                &.zoomIn{
+                    animation: zoomIn 1s forwards;
+
+                }
+            }
+        }
+
+    }
+    .servicesIcon.Mb{
+        position: relative;
+        overflow: hidden;
+        span{
+            opacity: 0;
+            padding: 0 !important;
+            transition: all ease 0.3s;
+            img{
+                box-shadow: unset !important;
+            }
+          &._centerIcon{
+                .__cover{
+                    box-shadow: unset !important;
+                }
+          }
+    
+        }
+        ._rightIcon{
+            position: absolute;
+            width: 98%;
+            height: auto;
+            top: 56px;
+            left: 1%;
+            z-index: 3;
+        }
+        ._leftIcon{
+            position: absolute;
+            z-index: 2;
+            width: 98%;
+            height: auto;
+            top: 56px;
+            left: 1%;
+        }
+        ._centerIcon{
+            position: relative;
+            z-index: 1;
+            opacity: 1;
+        }
+        .zoomIn{
+            animation: zoomIn 2s forwards;
+            // animation-duration: 0.3s;
+        }
+        .slideFromLeftToCenter{
+            animation: slideFromLeftToCenter 1.5s forwards;
+            // animation-duration: 0.3s;
+            animation-delay: 2s;
+        }
+        .slideFromRightToCenter{
+            animation: slideFromRightToCenter 1.5s forwards;
+            animation-delay: 3.5s;
+        }
+    }
+    .location {
+
+        .vibeLogo img.pointer {
+            margin: auto;
+            margin-top: -160px;
+            z-index: 4;
+            margin-bottom: 35px;
+        }
+    }
+
+
+} // end css for the Mobile view
+
+
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767px)
+// {
+//     body{
+//         p{
+            
+//             font-size: 14px;
+//         }
+//         h2{
+            
+//             font-size: 20px;
+//         }
+//     }
+
+// } // end CSS for small devices
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px)
+{
+
+        // css for the INTRO 
+        .introcover{
+            padding:  60px 0px;
+            .animateTitle{
+                width: 70%;
+                text-align: center;
+                display: inline-flex;
+                &::after{
+                    width: 60px;
+                    left: calc(50% - 30px);
+                }
+                .split-text{
+                    font-size: 30px;
+                    // margin: unset;
+                }
+            }
+            .loginIcon{
+                margin-top: 30px;
+                width: 120%;
+                margin-left: -10%;
+                span{
+                    box-shadow: 0px 5px 30px 1px #ffffff45 !important;
+                }
+                span.loginDetails{
+                    margin-right: -15px;
+                }
+                
+                span.loginBooking{
+                    margin-left: -15px;
+                }
+    
+            }
+        }
+        // css for the vibe & centro 
+        .vibecover{
+            .gradientBg{
+                background-image: url(images/mb/gradientVibe.png);
+                background-position: top;
+                background-size: 100%;
+                width: 100%;
+                height: 100%;
+                /* margin-top: -30px; */
+                /* padding-top: 30px; */
+                .vibe{
+                    margin-top: 45px;
+                    margin-left: 0;
+                }
+                .textAndImg{
+                    margin-top: 0;
+                    .text.left{
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        width: 80%;
+                    }
+                    .right{
+                        width: 85%;
+                        left: 15%;
+                    }
+                }
+                .centro{
+                    margin-top: -22px;
+                    margin-left: 14%;
+                    margin-bottom: 45px;
+                }
+                .second{
+                    .right{
+                        width: 100%;
+                        left: 0;
+                        padding: 60px 30px;
+                        margin: auto;
+                        img{
+                            height: auto;
+                        }
+                    }
+                    .onlyMb.transparent{
+                        padding: 15px 30px;
+                        margin-top: 45px;
+                    }
+                }
+            }
+        }
+        .spacer{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .comprehen-icon{
+            background: url(images/mb/matteBg.png);
+            background-size: 100% 100%;
+            background-position: center;
+            padding: 15px;
+            &.d-none.d-lg-block{
+                display: none !important;
+                visibility: hidden;
+            }
+            &.d-lg-block{
+                display: flex !important;
+            }
+            ._items{
+                padding: 0 15px;
+                width: 88%;
+                text-align: center;
+                img{
+                    width: 75%;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        #comprehenCarousel{
+            background: url(images/mb/matteBg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 60px 45px 75px 45px;
+            position: relative;
+            ol{
+                bottom: 15px;
+                li{
+                    list-style: none;
+                    background-color: darkgrey;
+                    text-indent: unset;
+                    text-align: center;
+                    border-bottom: none;
+                    border-top: none;
+                    width: auto;
+                    height: auto;
+                    padding: 5px;
+                    color: #fff;
+                    &.active{
+                        background: #464646;
+                    }
+                }
+            }
+            .carousel-control-prev, .carousel-control-next{
+                color: #464646;
+                background: lightgrey;
+                background: unset;
+                position: absolute;
+                width: 80px;
+                height: 50px;
+                top: 85%;
+                span.fa{
+                    font-size: 30px;
+                }
+            }
+            .carousel-inner{
+                ._items{
+                    text-align: center;
+                }
+            }
+        }
+        .comprehen-animate{
+            height: 800px;
+            .gradientBg{
+                height: 100%;
+                padding: 30px 0;
+                .top.screens{
+                    opacity: 0.75;
+                    // margin-top: 0;
+                    height: 50%;
+                    margin: 0;
+                    img{
+                        margin-right: -300px !important;
+                        height: 100%;
+                        width: auto;
+                    }
+                    
+            
+                }
+                .bottom.screens{
+                    opacity: 0.75;
+                    height: 50%;
+                    margin: 0;
+                    margin-top: -30px;
+                    // margin-top: 0;
+                    // margin-bottom: 100px;
+                    img{
+                        margin-left: -300px !important;  
+                        height: 100%;
+                        width: auto;
+                    }
+                    
+              
+                }
+                .leftToRight.Mb{
+                    animation: leftToRightMb 3s forwards;
+                }
+                .rightToLeft.Mb{
+                    animation: rightToLeftMb 3s forwards;
+                }
+            }
+            
+        
+        }
+        .services{
+            background: url(images/mb/matteBg2.jpg);
+            background-size: 100%;
+            background-position: center;
+            .content{
+                padding: 30px;
+                padding-top: 60px;
+                .onlyMb{
+                    box-shadow: 0px 20px 30px #736f6f;
+                    padding: 0;
+                    border-radius: 55px;
+                    width: 80%;
+                    margin: auto;
+                    opacity: 0;
+                    &.zoomIn{
+                        animation: zoomIn 1s forwards;
+    
+                    }
+                }
+            }
+    
+        }
+        .servicesIcon.Mb{
+            position: relative;
+            overflow: hidden;
+            span{
+                opacity: 0;
+                padding: 0 !important;
+                transition: all ease 0.3s;
+                img{
+                    box-shadow: unset !important;
+                }
+              &._centerIcon{
+                    .__cover{
+                        box-shadow: unset !important;
+                    }
+              }
+        
+            }
+            ._rightIcon{
+                position: absolute;
+                width: 98%;
+                height: auto;
+                top: 56px;
+                left: 1%;
+                z-index: 3;
+            }
+            ._leftIcon{
+                position: absolute;
+                z-index: 2;
+                width: 98%;
+                height: auto;
+                top: 56px;
+                left: 1%;
+            }
+            ._centerIcon{
+                position: relative;
+                z-index: 1;
+                opacity: 1;
+            }
+            .zoomIn{
+                animation: zoomIn 2s forwards;
+                // animation-duration: 0.3s;
+            }
+            .slideFromLeftToCenter{
+                animation: slideFromLeftToCenter 1.5s forwards;
+                // animation-duration: 0.3s;
+                animation-delay: 2s;
+            }
+            .slideFromRightToCenter{
+                animation: slideFromRightToCenter 1.5s forwards;
+                animation-delay: 3.5s;
+            }
+        }
+        .location {
+            padding-top: 45px;
+            .vibeLogo img.pointer {
+                margin: auto;
+                margin-top: -100px;
+                z-index: 4;
+                margin-bottom: -90px;
+            }
+        }
+        .row.m-0.comprehen-icon.d-none.d-lg-block{
+            // display: flex !important;
+            display: none !important;
+        }
+
+    
+} // end css for lanscape device
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px)
+{   
+    .d-lg-block {
+        display: flex !important;
+    }
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)
+{
+    .d-lg-block {
+        display: flex !important;
+    }
+
+}
+
